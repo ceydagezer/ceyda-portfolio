@@ -1,10 +1,13 @@
+'''
 📌 Ceyda Gezer – Personal Portfolio Website
 
 This repository contains the source code of my personal portfolio website.
 The site was created as part of my learning journey in web development, and it showcases my projects, skills, certificates, and Medium blog posts.
 
+
 🌐 Live Website
 👉 
+
 
 🎯 About This Project
 
@@ -24,6 +27,7 @@ Portfolio structure
 
 It will continue evolving as I learn more about Full Stack Development, Cloud technologies, and AI/Data.
 
+
 🧩 Features
 
 Modern hero section with avatar
@@ -37,6 +41,7 @@ Clean and minimal design
 Mobile-friendly layout
 
 Links to GitHub, LinkedIn, and Medium
+
 
 📁 Project Structure
 /portfolio
@@ -59,6 +64,7 @@ Flexbox & Responsive Layouts
 
 GitHub Pages for hosting
 
+
 👩‍💻 Author
 
 Ceyda Gezer
@@ -71,7 +77,8 @@ LinkedIn: https://www.linkedin.com/in/ceydagezer-312858234/
 
 Medium: https://medium.com/@gezerceyda17
 
-📬 Contact
 
+📬 Contact
 For any questions or collaboration opportunities:
 📩 gezerceyda17@gmail.com
+'''
