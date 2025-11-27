@@ -1,50 +1,45 @@
-'''
-📌 Ceyda Gezer – Personal Portfolio Website
+# 📌 Ceyda Gezer – Personal Portfolio Website
 
-This repository contains the source code of my personal portfolio website.
+This repository contains the source code of my personal portfolio website.  
 The site was created as part of my learning journey in web development, and it showcases my projects, skills, certificates, and Medium blog posts.
 
+---
 
-🌐 Live Website
+## 🌐 Live Website  
 👉 
 
+---
 
-🎯 About This Project
+## 🎯 About This Project
 
 This website was created to improve my understanding of:
 
-HTML5
-
-CSS3
-
-Responsive design
-
-UI layout building
-
-Git & GitHub workflow
-
-Portfolio structure
+- HTML5  
+- CSS3  
+- Responsive design  
+- UI layout building  
+- Git & GitHub workflow  
+- Portfolio structure  
 
 It will continue evolving as I learn more about Full Stack Development, Cloud technologies, and AI/Data.
 
+---
 
-🧩 Features
+## 🧩 Features
 
-Modern hero section with avatar
+- Modern hero section with avatar  
+- Dropdown navigation menu (Projects, Blog, Contact)  
+- Skills & certificates section  
+- Clean and minimal dark-themed design  
+- Fully responsive layout  
+- Links to GitHub, LinkedIn, and Medium  
 
-Dropdown navigation menu (Projects, Blog, Contact)
+---
 
-Skills & certificates section
+## 📁 Project Structure
 
-Clean and minimal design
-
-Mobile-friendly layout
-
-Links to GitHub, LinkedIn, and Medium
-
-
-📁 Project Structure
-/portfolio
+```
+/your-repo-name
 │── index.html
 │── style.css
 │── ceyda.jpg
@@ -53,32 +48,32 @@ Links to GitHub, LinkedIn, and Medium
 │      ├── white-linkedin-logo.svg
 │      ├── Medium-Icon-White.svg
 │      └── envelope-mail.svg
+```
 
-🚀 Technologies Used
+---
 
-HTML5
+## 🚀 Technologies Used
 
-CSS3
+- HTML5  
+- CSS3  
+- Flexbox & Responsive Layouts  
+- GitHub Pages (for hosting)
 
-Flexbox & Responsive Layouts
+---
 
-GitHub Pages for hosting
+## 👩‍💻 Author
 
-
-👩‍💻 Author
-
-Ceyda Gezer
-Computer Engineering Student
+**Ceyda Gezer**  
+Computer Engineering Student  
 Full Stack Development & Cloud
 
-GitHub: https://github.com/ceydagezer
-
-LinkedIn: https://www.linkedin.com/in/ceydagezer-312858234/
-
+GitHub: https://github.com/ceydagezer  
+LinkedIn: https://www.linkedin.com/in/ceydagezer-312858234/  
 Medium: https://medium.com/@gezerceyda17
 
+---
 
-📬 Contact
-For any questions or collaboration opportunities:
-📩 gezerceyda17@gmail.com
-'''
+## 📬 Contact
+
+For any questions or collaboration opportunities:  
+📩 **gezerceyda17@gmail.com**
