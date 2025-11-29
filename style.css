@@ -24,6 +24,13 @@ body {
   padding: 72px 12px 48px; /* Üstte nav için boşluk */
 }
 
+/* Yatay taşmayı GLOBAL olarak engelle */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* ---------------------- */
 /*   ÜST MENÜ (NAVBAR)    */
 /* ---------------------- */
@@ -77,6 +84,7 @@ body {
   top: 100%;
   left: 0;
   min-width: 230px;
+  max-width: 90vw;           /* EKRAN GENİŞLİĞİNDEN FAZLA OLMASIN */
   background: #181818;
   border-radius: 12px;
   border: 1px solid var(--border);
@@ -100,11 +108,21 @@ body {
   font-size: 0.85rem;
   color: var(--text-soft);
   text-decoration: none;
+
+  /* Uzun e-posta ve linkler ekranı taşırmasın */
+  white-space: normal;
+  word-break: break-all;
 }
 
 .nav-dropdown a:hover {
   background: #222222;
   color: var(--text);
+}
+
+/* İletişim (son menü) dropdown’unu sağa yasla ki sağdan taşmasın */
+.nav-item:last-child .nav-dropdown {
+  left: auto;
+  right: 0;
 }
 
 /* ---------------------- */
@@ -153,10 +171,15 @@ body {
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
 }
 
+/* >>> "Merhaba, ben" ve "Ceyda Gezer" hizası BURADA <<< */
 .hero-title-block {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
+  display: block;          /* flex yerine block: alt alta diz */
+}
+
+/* ikisini de blok yap ve satır başına al */
+.hello-text,
+.hero-name {
+  display: block;
 }
 
 /* Merhaba, ben ve Ceyda Gezer aynı boyutta */
@@ -339,16 +362,6 @@ body {
 }
 
 /* ---------------------- */
-/*   GENEL LAYOUT KORUMA  */
-/* ---------------------- */
-
-html,
-body {
-  max-width: 100%;
-  overflow-x: hidden; /* yatay kaymayı engelle */
-}
-
-/* ---------------------- */
 /*       RESPONSIVE       */
 /* ---------------------- */
 
@@ -360,17 +373,6 @@ body {
   .hero-card {
     grid-template-columns: 1fr;
     padding: 18px 16px;
-  }
-
-  /* Merhaba, ben / Ceyda Gezer satırı daha rahat otursun */
-  .hero-title-block {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-  }
-
-  .hero-name-row {
-    align-items: flex-start;
   }
 
   .hero-name,
@@ -387,5 +389,11 @@ body {
     width: 190px;
     height: 190px;
   }
+
+  .nav-links {
+    gap: 16px;
+    font-size: 0.85rem;
+  }
 }
+
 
