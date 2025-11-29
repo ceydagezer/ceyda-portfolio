@@ -21,13 +21,11 @@ body {
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
-  padding: 72px 12px 48px; /* nav boşluğu */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 72px 12px 48px; /* Üstte nav için boşluk */
+  display: block;          /* Ortalamayı wrapper'lara bırakıyoruz */
 }
 
-/* GLOBAL: Yatay kaymayı kapat */
+/* GLOBAL: yatay taşmayı kapat */
 html,
 body {
   max-width: 100%;
@@ -117,7 +115,7 @@ body {
   color: var(--text);
 }
 
-/* Son dropdown’ın sağdan taşmasını engelle (iletişim menüsü için) */
+/* Son öğe (İletişim) dropdown'u sağdan taşmasın */
 .nav-item:last-child .nav-dropdown {
   right: 0;
   left: auto;
@@ -130,6 +128,7 @@ body {
 .hero-wrapper {
   width: 100%;
   max-width: 1100px;
+  margin: 0 auto;              /* Orta hizalama */
   display: flex;
   justify-content: center;
 }
@@ -174,9 +173,11 @@ body {
   gap: 8px;
 }
 
+/* Merhaba, ben ve Ceyda Gezer aynı boyutta */
 .hello-text {
   font-size: clamp(1.8rem, 3vw, 2.2rem);
   font-weight: 700;
+  color: var(--text);
 }
 
 .hero-name {
@@ -187,6 +188,10 @@ body {
 .hero-title {
   font-size: 0.95rem;
   color: var(--text-soft);
+}
+
+.hero-title span {
+  color: var(--accent);
 }
 
 .hero-tags {
@@ -208,6 +213,11 @@ body {
   font-size: 0.9rem;
   color: #dcdcdc;
   max-width: 520px;
+}
+
+.hero-highlight {
+  color: var(--accent);
+  font-weight: 500;
 }
 
 /* İlgi alanları listesi */
@@ -243,6 +253,7 @@ body {
 
 .hero-social a:hover {
   border-color: #e4e4e4;
+  color: #ffffff;
   background: #ffffff10;
 }
 
@@ -250,7 +261,7 @@ body {
   display: block;
 }
 
-/* Profil fotoğrafı */
+/* Profil fotoğrafı kısmı */
 .hero-avatar-wrapper {
   display: flex;
   justify-content: center;
@@ -273,6 +284,10 @@ body {
   border-radius: 999px;
   overflow: hidden;
   border: 2px solid #2e2e2e;
+  background: #0f0f0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-avatar-inner img {
@@ -289,8 +304,11 @@ body {
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid #e4e4e4;
+  color: #ffffff;
   font-size: 0.7rem;
   text-transform: uppercase;
+  letter-spacing: 0.08em;
+  backdrop-filter: blur(8px);
 }
 
 /* Alt not */
@@ -307,7 +325,7 @@ body {
 .section-card {
   width: 100%;
   max-width: 1100px;
-  margin-top: 28px;
+  margin: 28px auto 0;
   background: var(--bg-soft);
   border-radius: 24px;
   padding: 22px 24px;
@@ -336,8 +354,7 @@ body {
 /* ---------------------- */
 
 @media (max-width: 768px) {
-
-  /* Başlık hizasını düzelt */
+  /* Başlığı daha rahat göster */
   .hero-title-block {
     flex-direction: column;
     align-items: flex-start;
@@ -353,16 +370,6 @@ body {
     font-size: 1.6rem;
   }
 
-  /* Dropdown taşmasını düzelt */
-  .nav-dropdown {
-    max-width: 90vw;
-  }
-
-  .nav-dropdown a {
-    white-space: normal;
-    word-break: break-word;
-  }
-
   .hero-card {
     grid-template-columns: 1fr;
     padding: 18px 16px;
@@ -372,7 +379,23 @@ body {
     width: 190px;
     height: 190px;
   }
+
+  /* Dropdown taşmasını engelle */
+  .nav-dropdown {
+    max-width: 90vw;
+  }
+
+  .nav-dropdown a {
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .nav-links {
+    gap: 16px;
+    font-size: 0.85rem;
+  }
 }
+
 
 
 
