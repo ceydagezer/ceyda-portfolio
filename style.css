@@ -21,15 +21,10 @@ body {
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 72px 12px 48px; /* Üstte nav için boşluk */
-  display: block;          /* Ortalamayı wrapper'lara bırakıyoruz */
-}
-
-/* GLOBAL: yatay taşmayı kapat */
-html,
-body {
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 /* ---------------------- */
@@ -115,12 +110,6 @@ body {
   color: var(--text);
 }
 
-/* Son öğe (İletişim) dropdown'u sağdan taşmasın */
-.nav-item:last-child .nav-dropdown {
-  right: 0;
-  left: auto;
-}
-
 /* ---------------------- */
 /*       HERO KARTI       */
 /* ---------------------- */
@@ -128,7 +117,6 @@ body {
 .hero-wrapper {
   width: 100%;
   max-width: 1100px;
-  margin: 0 auto;              /* Orta hizalama */
   display: flex;
   justify-content: center;
 }
@@ -145,6 +133,12 @@ body {
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
 }
 
+@media (max-width: 768px) {
+  .hero-card {
+    grid-template-columns: 1fr;
+  }
+}
+
 .hero-content {
   display: flex;
   flex-direction: column;
@@ -153,6 +147,7 @@ body {
 }
 
 /* İsim satırı */
+
 .hero-name-row {
   display: flex;
   align-items: center;
@@ -221,6 +216,7 @@ body {
 }
 
 /* İlgi alanları listesi */
+
 .hero-list {
   margin-left: 18px;
   color: var(--text-soft);
@@ -231,6 +227,7 @@ body {
 }
 
 /* Sosyal butonlar */
+
 .hero-social {
   display: flex;
   flex-wrap: wrap;
@@ -262,6 +259,7 @@ body {
 }
 
 /* Profil fotoğrafı kısmı */
+
 .hero-avatar-wrapper {
   display: flex;
   justify-content: center;
@@ -325,7 +323,7 @@ body {
 .section-card {
   width: 100%;
   max-width: 1100px;
-  margin: 28px auto 0;
+  margin-top: 28px;
   background: var(--bg-soft);
   border-radius: 24px;
   padding: 22px 24px;
@@ -349,52 +347,6 @@ body {
   margin-top: 6px;
 }
 
-/* ---------------------- */
-/*       RESPONSIVE       */
-/* ---------------------- */
-
-@media (max-width: 768px) {
-  /* Başlığı daha rahat göster */
-  .hero-title-block {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-  }
-
-  .hero-name-row {
-    align-items: flex-start;
-  }
-
-  .hello-text,
-  .hero-name {
-    font-size: 1.6rem;
-  }
-
-  .hero-card {
-    grid-template-columns: 1fr;
-    padding: 18px 16px;
-  }
-
-  .hero-avatar-card {
-    width: 190px;
-    height: 190px;
-  }
-
-  /* Dropdown taşmasını engelle */
-  .nav-dropdown {
-    max-width: 90vw;
-  }
-
-  .nav-dropdown a {
-    white-space: normal;
-    word-break: break-word;
-  }
-
-  .nav-links {
-    gap: 16px;
-    font-size: 0.85rem;
-  }
-}
 
 
 
