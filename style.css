@@ -21,14 +21,21 @@ body {
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
+  padding: 72px 12px 48px; /* nav boşluğu */
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 72px 12px 48px; /* Üstte nav için boşluk */
+}
+
+/* GLOBAL: Yatay kaymayı kapat */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* ---------------------- */
-/* ÜST MENÜ (NAVBAR) */
+/*   ÜST MENÜ (NAVBAR)    */
 /* ---------------------- */
 
 .top-nav {
@@ -110,8 +117,14 @@ body {
   color: var(--text);
 }
 
+/* Son dropdown’ın sağdan taşmasını engelle (iletişim menüsü için) */
+.nav-item:last-child .nav-dropdown {
+  right: 0;
+  left: auto;
+}
+
 /* ---------------------- */
-/* HERO KARTI */
+/*       HERO KARTI       */
 /* ---------------------- */
 
 .hero-wrapper {
@@ -133,12 +146,6 @@ body {
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
 }
 
-@media (max-width: 768px) {
-  .hero-card {
-    grid-template-columns: 1fr;
-  }
-}
-
 .hero-content {
   display: flex;
   flex-direction: column;
@@ -147,7 +154,6 @@ body {
 }
 
 /* İsim satırı */
-
 .hero-name-row {
   display: flex;
   align-items: center;
@@ -168,11 +174,9 @@ body {
   gap: 8px;
 }
 
-/* Merhaba, ben ve Ceyda Gezer aynı boyutta */
 .hello-text {
   font-size: clamp(1.8rem, 3vw, 2.2rem);
   font-weight: 700;
-  color: var(--text);
 }
 
 .hero-name {
@@ -183,10 +187,6 @@ body {
 .hero-title {
   font-size: 0.95rem;
   color: var(--text-soft);
-}
-
-.hero-title span {
-  color: var(--accent);
 }
 
 .hero-tags {
@@ -210,13 +210,7 @@ body {
   max-width: 520px;
 }
 
-.hero-highlight {
-  color: var(--accent);
-  font-weight: 500;
-}
-
 /* İlgi alanları listesi */
-
 .hero-list {
   margin-left: 18px;
   color: var(--text-soft);
@@ -227,7 +221,6 @@ body {
 }
 
 /* Sosyal butonlar */
-
 .hero-social {
   display: flex;
   flex-wrap: wrap;
@@ -250,7 +243,6 @@ body {
 
 .hero-social a:hover {
   border-color: #e4e4e4;
-  color: #ffffff;
   background: #ffffff10;
 }
 
@@ -258,8 +250,7 @@ body {
   display: block;
 }
 
-/* Profil fotoğrafı kısmı */
-
+/* Profil fotoğrafı */
 .hero-avatar-wrapper {
   display: flex;
   justify-content: center;
@@ -282,10 +273,6 @@ body {
   border-radius: 999px;
   overflow: hidden;
   border: 2px solid #2e2e2e;
-  background: #0f0f0f;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .hero-avatar-inner img {
@@ -302,11 +289,8 @@ body {
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid #e4e4e4;
-  color: #ffffff;
   font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  backdrop-filter: blur(8px);
 }
 
 /* Alt not */
@@ -317,7 +301,7 @@ body {
 }
 
 /* ---------------------- */
-/* BECERİLER / SERTİFİKA */
+/*   BECERİLER / SERTİFİKA */
 /* ---------------------- */
 
 .section-card {
@@ -346,6 +330,50 @@ body {
 .info-list li + li {
   margin-top: 6px;
 }
+
+/* ---------------------- */
+/*       RESPONSIVE       */
+/* ---------------------- */
+
+@media (max-width: 768px) {
+
+  /* Başlık hizasını düzelt */
+  .hero-title-block {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .hero-name-row {
+    align-items: flex-start;
+  }
+
+  .hello-text,
+  .hero-name {
+    font-size: 1.6rem;
+  }
+
+  /* Dropdown taşmasını düzelt */
+  .nav-dropdown {
+    max-width: 90vw;
+  }
+
+  .nav-dropdown a {
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .hero-card {
+    grid-template-columns: 1fr;
+    padding: 18px 16px;
+  }
+
+  .hero-avatar-card {
+    width: 190px;
+    height: 190px;
+  }
+}
+
 
 
 
