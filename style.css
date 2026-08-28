@@ -845,3 +845,21 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: #444444;
 }
+
+/* ========================= */
+/*       PROJECT LINKS       */
+/* ========================= */
+
+#projects .info-list a,
+#projects .info-list a:visited {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: #666666;
+  text-underline-offset: 3px;
+  font-weight: 600;
+}
+
+#projects .info-list a:hover {
+  color: #ffffff;
+  text-decoration-color: #ffffff;
+}
