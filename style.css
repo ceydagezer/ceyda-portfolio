@@ -605,3 +605,50 @@ a {
     font-size: 0.8rem;
   }
 }
+
+/* FORCE SIMPLE LIST STYLE */
+
+.info-list {
+  display: block !important;
+  grid-template-columns: none !important;
+}
+
+.info-list li,
+#education .info-list li,
+#experience .info-list li,
+#skills .info-list li,
+#projects .info-list li,
+#current-focus .info-list li,
+#certificates .info-list li,
+#blog .info-list li,
+#contact .info-list li {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  transform: none !important;
+  min-height: auto !important;
+}
+
+#education .info-list,
+#experience .info-list,
+#skills .info-list,
+#projects .info-list,
+#current-focus .info-list,
+#certificates .info-list,
+#blog .info-list,
+#contact .info-list {
+  display: block !important;
+  grid-template-columns: none !important;
+}
+
+.info-list li + li {
+  margin-top: 10px !important;
+}
+
+.info-list li:hover {
+  background: transparent !important;
+  border: none !important;
+  transform: none !important;
+}
