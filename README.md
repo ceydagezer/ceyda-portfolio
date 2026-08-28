@@ -1,79 +1,113 @@
-# 📌 Ceyda Gezer – Personal Portfolio Website
+```
+# 💻 Personal Portfolio Website
 
-This repository contains the source code of my personal portfolio website.  
-The site was created as part of my learning journey in web development, and it showcases my projects, skills, certificates, and Medium blog posts.
+My personal portfolio website showcasing my **software projects, technical skills, certifications, and blog content**.
 
----
-
-## 🌐 Live Website  
-👉 
+The website was originally created while learning frontend development and continues to evolve as I gain experience in full-stack software development.
 
 ---
 
-## 🎯 About This Project
+## 🌐 Live Website
 
-This website was created to improve my understanding of:
-
-- HTML5  
-- CSS3  
-- Responsive design  
-- UI layout building  
-- Git & GitHub workflow  
-- Portfolio structure  
-
-It will continue evolving as I learn more about Full Stack Development, Cloud technologies, and AI/Data.
+🔗 Add your website URL here
 
 ---
 
-## 🧩 Features
+## 👩‍💻 About
 
-- Modern hero section with avatar  
-- Dropdown navigation menu (Projects, Blog, Contact)  
-- Skills & certificates section  
-- Clean and minimal dark-themed design  
-- Fully responsive layout  
-- Links to GitHub, LinkedIn, and Medium  
+The portfolio provides an overview of my background as a Computer Engineering student and includes links to my projects, GitHub repositories, technical articles, and professional profiles.
+
+It serves as a central place where I can document my development journey and showcase the projects I build.
+
+---
+
+## ✨ Features
+
+- Personal introduction and developer profile
+- Featured software projects
+- Technical skills and technologies
+- Certifications
+- Blog / technical articles
+- GitHub and LinkedIn integration
+- Contact information
+- Responsive design for desktop and mobile devices
+- Clean and minimal dark-themed interface
+
+---
+
+## 🛠️ Technologies
+
+- HTML5
+- CSS3
+- Responsive Web Design
+- Flexbox
+- Git
+- GitHub
+- GitHub Pages
 
 ---
 
 ## 📁 Project Structure
 
-```
-/your-repo-name
-│── index.html
-│── style.css
-│── ceyda.jpg
-│── icons/
-│      ├── github-mark-white.svg
-│      ├── white-linkedin-logo.svg
-│      ├── Medium-Icon-White.svg
-│      └── envelope-mail.svg
-```
+    personal-portfolio/
+    │
+    ├── index.html
+    ├── style.css
+    ├── ceyda.jpg
+    │
+    ├── icons/
+    │   ├── github-mark-white.svg
+    │   ├── white-linkedin-logo.svg
+    │   ├── Medium-Icon-White.svg
+    │   └── envelope-mail.svg
+    │
+    └── README.md
 
 ---
 
-## 🚀 Technologies Used
+## 🎯 Purpose
 
-- HTML5  
-- CSS3  
-- Flexbox & Responsive Layouts  
-- GitHub Pages (for hosting)
+This project was created to practice and improve my understanding of:
+
+- Semantic HTML
+- CSS styling and layouts
+- Responsive web design
+- UI organization
+- Git and GitHub workflows
+- Personal portfolio design
+- Deploying a static website
+
+The website is continuously updated as I build new projects and expand my software development skills.
 
 ---
 
-## 👩‍💻 Author
+## 🗺️ Future Improvements
+
+- [ ] Continue improving the responsive design
+- [ ] Add new software projects
+- [ ] Improve accessibility
+- [ ] Improve performance and SEO
+- [ ] Add richer project case studies
+- [ ] Integrate new blog content
+- [ ] Update the website as my technology stack grows
+
+---
+
+## 👩‍💻 Developer
 
 **Ceyda Gezer**  
-Computer Engineering Student  
-Full Stack Development & Cloud
+Fourth-Year Computer Engineering Student  
+Interested in Full-Stack Software Development, Backend Development, and Cloud Technologies
 
-GitHub: https://github.com/ceydagezer  
-LinkedIn: https://www.linkedin.com/in/ceydagezer-312858234/  
-Medium: https://medium.com/@gezerceyda17
+[GitHub](https://github.com/ceydagezer)  
+[LinkedIn](https://www.linkedin.com/in/ceydagezer-312858234/)  
+[Medium](https://medium.com/@gezerceyda17)
 
 ---
 
-## 📬 Contact
+## 📫 Contact
 
-For any questions or collaboration opportunities:  
-📩 **gezerceyda17@gmail.com**
+For questions or collaboration opportunities:
+
+**Email:** gezerceyda17@gmail.com
+```
