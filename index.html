@@ -12,10 +12,18 @@
 
   <meta
     name="description"
-    content="Ceyda Gezer - Computer Engineering student and full-stack developer building practical web and mobile software projects."
+    content="Ceyda Gezer - Computer Engineering student focused on full-stack software development, databases, backend technologies and cloud computing."
   />
 
-  <meta name="author" content="Ceyda Gezer" />
+  <meta
+    name="keywords"
+    content="Ceyda Gezer, Computer Engineering, Full Stack Developer, React, JavaScript, Node.js, PostgreSQL, Supabase"
+  />
+
+  <meta
+    name="author"
+    content="Ceyda Gezer"
+  />
 
 
   <style>
@@ -29,7 +37,7 @@
       --surface: #ffffff;
 
       --black: #111111;
-      --black-soft: #1a1a1a;
+      --black-soft: #191919;
 
       --text: #171717;
       --text-soft: #70706a;
@@ -99,6 +107,8 @@
 
       z-index: 1000;
 
+      width: 100%;
+
       background: rgba(17, 17, 17, 0.98);
 
       border-bottom: 1px solid #292929;
@@ -108,30 +118,26 @@
 
 
     .nav-container {
-      width: min(
-        calc(100% - 40px),
-        var(--max-width)
-      );
+      width: 100%;
+      height: 72px;
 
-      height: 68px;
-
-      margin: 0 auto;
+      padding: 0 30px;
 
       display: flex;
+
       align-items: center;
       justify-content: space-between;
     }
 
 
     .logo {
-      width: 42px;
-      height: 42px;
-
-      position: relative;
-      top: -3px;
+      width: 43px;
+      height: 43px;
 
       display: grid;
       place-items: center;
+
+      flex-shrink: 0;
 
       border: 1px solid #505050;
       border-radius: 50%;
@@ -143,36 +149,43 @@
 
       letter-spacing: -0.03em;
 
-      transition: 0.2s ease;
+      transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
     }
 
 
     .logo:hover {
-      background: #222;
-      border-color: #888;
+      background: #222222;
+      border-color: #888888;
+
+      transform: translateY(-1px);
     }
 
 
     .nav-right {
       display: flex;
+
       align-items: center;
 
-      gap: 30px;
+      gap: 26px;
     }
 
 
     .nav-links {
       display: flex;
+
       align-items: center;
 
-      gap: 30px;
+      gap: 27px;
     }
 
 
     .nav-links a {
       color: #bcbcbc;
 
-      font-size: 0.8rem;
+      font-size: 0.79rem;
 
       transition: color 0.2s ease;
     }
@@ -183,14 +196,17 @@
     }
 
 
-    /* LANGUAGE */
+    /* ====================================================== */
+    /* LANGUAGE SWITCH */
+    /* ====================================================== */
 
     .language-switch {
       display: flex;
 
       padding: 3px;
 
-      border: 1px solid #333;
+      border: 1px solid #333333;
+
       border-radius: 999px;
 
       background: #191919;
@@ -198,14 +214,15 @@
 
 
     .lang-button {
-      border: none;
-      border-radius: 999px;
-
       padding: 5px 9px;
+
+      border: none;
+
+      border-radius: 999px;
 
       background: transparent;
 
-      color: #777;
+      color: #777777;
 
       cursor: pointer;
 
@@ -223,7 +240,7 @@
 
     .lang-button.active {
       background: white;
-      color: #111;
+      color: #111111;
     }
 
 
@@ -237,11 +254,11 @@
         var(--max-width)
       );
 
-      min-height: calc(100vh - 68px);
+      min-height: calc(100vh - 72px);
 
       margin: 0 auto;
 
-      padding: 70px 0;
+      padding: 72px 0;
 
       display: grid;
 
@@ -260,7 +277,7 @@
 
 
     .hero-content {
-      max-width: 670px;
+      max-width: 680px;
     }
 
 
@@ -269,7 +286,7 @@
 
       color: #777770;
 
-      font-size: 0.7rem;
+      font-size: 0.69rem;
 
       text-transform: uppercase;
 
@@ -279,6 +296,7 @@
 
     .hero-title {
       display: flex;
+
       flex-direction: column;
 
       font-size: clamp(
@@ -294,16 +312,18 @@
 
 
     .hero-title-light {
-      font-weight: 450;
-      color: #777770;
+      font-weight: 430;
+
+      color: #82827b;
     }
 
 
     .hero-title-name {
-      margin-top: 5px;
+      margin-top: 6px;
 
-      font-weight: 800;
       color: #111111;
+
+      font-weight: 820;
     }
 
 
@@ -311,6 +331,8 @@
       max-width: 620px;
 
       margin-top: 32px;
+
+      color: #333333;
 
       font-size: clamp(
         1.25rem,
@@ -323,13 +345,11 @@
       letter-spacing: -0.035em;
 
       font-weight: 550;
-
-      color: #333;
     }
 
 
     .hero-description {
-      max-width: 530px;
+      max-width: 540px;
 
       margin-top: 18px;
 
@@ -343,6 +363,7 @@
       margin-top: 26px;
 
       display: flex;
+
       flex-wrap: wrap;
 
       gap: 8px;
@@ -353,6 +374,7 @@
       padding: 6px 11px;
 
       border: 1px solid #d7d7d1;
+
       border-radius: 999px;
 
       background: white;
@@ -367,6 +389,7 @@
       margin-top: 30px;
 
       display: flex;
+
       flex-wrap: wrap;
 
       gap: 10px;
@@ -383,10 +406,12 @@
       padding: 0 18px;
 
       display: inline-flex;
+
       align-items: center;
       justify-content: center;
 
       border: 1px solid #171717;
+
       border-radius: 999px;
 
       cursor: pointer;
@@ -406,7 +431,7 @@
 
 
     .button-primary {
-      background: #111;
+      background: #111111;
       color: white;
     }
 
@@ -418,6 +443,8 @@
 
     .button-secondary {
       background: transparent;
+
+      color: var(--text);
     }
 
 
@@ -434,6 +461,7 @@
       position: relative;
 
       display: flex;
+
       justify-content: center;
     }
 
@@ -477,7 +505,7 @@
         34px
         34px;
 
-      background: #444;
+      background: #444444;
 
       box-shadow:
         0 35px 80px
@@ -505,7 +533,7 @@
 
       border-radius: 999px;
 
-      background: #111;
+      background: #111111;
 
       color: white;
 
@@ -520,12 +548,12 @@
     .availability-dot {
       margin-right: 5px;
 
-      color: #8be28b;
+      color: #83db83;
     }
 
 
     /* ====================================================== */
-    /* COMMON SECTIONS */
+    /* COMMON SECTION */
     /* ====================================================== */
 
     .section {
@@ -541,7 +569,7 @@
 
 
     .section-header {
-      margin-bottom: 36px;
+      margin-bottom: 38px;
 
       display: flex;
 
@@ -553,7 +581,7 @@
 
 
     .section-kicker {
-      margin-bottom: 7px;
+      margin-bottom: 8px;
 
       color: var(--text-soft);
 
@@ -578,21 +606,44 @@
     }
 
 
-    .section-link {
-      padding-bottom: 2px;
-
-      border-bottom: 1px solid #888;
-
-      font-size: 0.82rem;
-    }
-
-
     /* ====================================================== */
     /* PROJECTS */
     /* ====================================================== */
 
     .projects-section {
       border-top: 1px solid var(--line);
+    }
+
+
+    .github-cta {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 11px 17px;
+
+      border-radius: 999px;
+
+      background: #111111;
+
+      color: white;
+
+      font-size: 0.77rem;
+      font-weight: 650;
+
+      white-space: nowrap;
+
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+
+    .github-cta:hover {
+      background: #303030;
+
+      transform: translateY(-2px);
     }
 
 
@@ -612,6 +663,7 @@
       background: white;
 
       border: 1px solid var(--line);
+
       border-radius: var(--radius-medium);
 
       transition:
@@ -635,6 +687,7 @@
       padding: 25px;
 
       display: flex;
+
       align-items: center;
       justify-content: center;
 
@@ -651,6 +704,7 @@
       margin-bottom: 18px;
 
       display: flex;
+
       justify-content: space-between;
 
       color: #85857e;
@@ -683,6 +737,7 @@
       margin-top: 18px;
 
       display: flex;
+
       flex-wrap: wrap;
 
       gap: 6px;
@@ -694,6 +749,7 @@
       padding: 5px 9px;
 
       border: 1px solid #deded8;
+
       border-radius: 999px;
 
       background: #f2f2ee;
@@ -706,6 +762,7 @@
       margin-top: 22px;
 
       display: flex;
+
       gap: 18px;
 
       font-size: 0.77rem;
@@ -716,12 +773,12 @@
     .project-links a {
       padding-bottom: 2px;
 
-      border-bottom: 1px solid #999;
+      border-bottom: 1px solid #999999;
     }
 
 
     /* ====================================================== */
-    /* PROJECT VISUAL 1 */
+    /* DASHBOARD MOCKUP */
     /* ====================================================== */
 
     .dashboard-preview {
@@ -741,6 +798,7 @@
       padding: 12px 8px;
 
       display: flex;
+
       flex-direction: column;
 
       gap: 10px;
@@ -754,7 +812,7 @@
     .dashboard-sidebar span {
       height: 6px;
 
-      background: #555;
+      background: #555555;
 
       border-radius: 10px;
     }
@@ -775,7 +833,7 @@
 
       margin-bottom: 14px;
 
-      background: #222;
+      background: #222222;
 
       border-radius: 10px;
     }
@@ -804,6 +862,7 @@
       margin-top: 10px;
 
       display: flex;
+
       flex-direction: column;
 
       gap: 6px;
@@ -820,7 +879,7 @@
 
 
     /* ====================================================== */
-    /* PHONE MOCKUP */
+    /* PHONE */
     /* ====================================================== */
 
     .phone {
@@ -830,7 +889,7 @@
 
       padding: 8px;
 
-      background: #111;
+      background: #111111;
 
       border-radius: 25px;
 
@@ -846,7 +905,7 @@
 
       margin: 2px auto 8px;
 
-      background: #444;
+      background: #444444;
 
       border-radius: 10px;
     }
@@ -899,7 +958,7 @@
 
 
     /* ====================================================== */
-    /* FORM MOCKUP */
+    /* FORM PROJECT MOCKUP */
     /* ====================================================== */
 
     .form-preview {
@@ -923,7 +982,7 @@
 
       margin-bottom: 18px;
 
-      background: #222;
+      background: #222222;
 
       border-radius: 10px;
     }
@@ -935,7 +994,7 @@
 
       margin: 10px 0 5px;
 
-      background: #aaa;
+      background: #aaaaaa;
     }
 
 
@@ -954,7 +1013,7 @@
 
       margin-top: 15px;
 
-      background: #222;
+      background: #222222;
 
       border-radius: 20px;
     }
@@ -1024,6 +1083,7 @@
 
     .experience-tech {
       display: flex;
+
       flex-wrap: wrap;
 
       align-items: flex-start;
@@ -1042,28 +1102,74 @@
     }
 
 
-    .skills-list {
-      margin-top: 22px;
-
-      display: flex;
-      flex-wrap: wrap;
-
-      gap:
-        12px
-        28px;
+    .skills-header {
+      margin-bottom: 40px;
     }
 
 
-    .skills-list span {
-      font-size: clamp(
-        1.2rem,
-        3vw,
-        2rem
-      );
+    .skills-grid {
+      display: grid;
 
-      font-weight: 680;
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
 
-      letter-spacing: -0.04em;
+      column-gap: 60px;
+      row-gap: 4px;
+    }
+
+
+    .skill-group {
+      padding: 25px 0;
+
+      border-top: 1px solid var(--line);
+    }
+
+
+    .skill-group-title {
+      margin-bottom: 15px;
+
+      color: var(--text-soft);
+
+      font-size: 0.69rem;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.14em;
+    }
+
+
+    .skill-items {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 8px;
+    }
+
+
+    .skill-items span {
+      padding: 7px 12px;
+
+      border: 1px solid #d7d7d1;
+
+      border-radius: 999px;
+
+      background: white;
+
+      color: #333333;
+
+      font-size: 0.74rem;
+
+      transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+
+    .skill-items span:hover {
+      border-color: #999999;
+
+      transform: translateY(-1px);
     }
 
 
@@ -1092,7 +1198,7 @@
 
       gap: 70px;
 
-      background: #111;
+      background: #111111;
 
       color: white;
 
@@ -1128,6 +1234,7 @@
       margin-top: 28px;
 
       display: flex;
+
       flex-wrap: wrap;
 
       gap: 18px;
@@ -1138,8 +1245,14 @@
     }
 
 
+    .contact-links a:hover {
+      color: white;
+    }
+
+
     .contact-form {
       display: flex;
+
       flex-direction: column;
 
       gap: 18px;
@@ -1148,6 +1261,7 @@
 
     .form-field {
       display: flex;
+
       flex-direction: column;
 
       gap: 6px;
@@ -1172,6 +1286,7 @@
       padding: 13px 14px;
 
       border: 1px solid #3a3a3a;
+
       border-radius: 10px;
 
       outline: none;
@@ -1188,7 +1303,7 @@
 
     .form-field input:focus,
     .form-field textarea:focus {
-      border-color: #888;
+      border-color: #888888;
     }
 
 
@@ -1200,20 +1315,32 @@
       padding: 0 18px;
 
       border: none;
+
       border-radius: 999px;
 
       background: white;
 
-      color: #111;
+      color: #111111;
 
       cursor: pointer;
 
       font-weight: 650;
+
+      transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+    }
+
+
+    .contact-button:hover {
+      background: #e9e9e9;
+
+      transform: translateY(-1px);
     }
 
 
     .form-note {
-      color: #777;
+      color: #777777;
 
       font-size: 0.67rem;
     }
@@ -1254,7 +1381,12 @@
     /* TABLET */
     /* ====================================================== */
 
-    @media (max-width: 900px) {
+    @media (max-width: 950px) {
+
+      .nav-links {
+        gap: 18px;
+      }
+
 
       .hero {
         grid-template-columns:
@@ -1295,9 +1427,9 @@
     @media (max-width: 720px) {
 
       .nav-container {
-        width: calc(100% - 24px);
-
         height: 60px;
+
+        padding: 0 12px;
       }
 
 
@@ -1417,6 +1549,13 @@
       }
 
 
+      .skills-grid {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+      }
+
+
       .contact-wrapper {
         width: calc(100% - 28px);
 
@@ -1454,6 +1593,7 @@
       <a
         href="#home"
         class="logo"
+        aria-label="Ceyda Gezer home"
       >
         CG
       </a>
@@ -1495,6 +1635,15 @@
             data-i18n="navWriting"
           >
             Writing ↗
+          </a>
+
+
+          <a
+            href="https://www.linkedin.com/in/ceydagezer-312858234/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn ↗
           </a>
 
 
@@ -1661,8 +1810,7 @@
           class="availability"
           data-i18n="available"
         >
-          <span class="availability-dot">●</span>
-          available for opportunities
+          ● available for opportunities
         </div>
 
       </div>
@@ -1691,7 +1839,7 @@
             class="section-kicker"
             data-i18n="selectedWork"
           >
-            Selected work
+            Selected Work
           </p>
 
 
@@ -1706,10 +1854,10 @@
           href="https://github.com/ceydagezer"
           target="_blank"
           rel="noopener noreferrer"
-          class="section-link"
+          class="github-cta"
           data-i18n="viewGithub"
         >
-          View GitHub →
+          View all projects on GitHub ↗
         </a>
 
 
@@ -1732,39 +1880,31 @@
 
 
               <div class="dashboard-sidebar">
-
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
-
               </div>
 
 
               <div class="dashboard-main">
 
-
                 <div class="dashboard-title"></div>
 
 
                 <div class="dashboard-stats">
-
                   <span></span>
                   <span></span>
                   <span></span>
-
                 </div>
 
 
                 <div class="dashboard-lines">
-
                   <span></span>
                   <span></span>
                   <span></span>
                   <span></span>
-
                 </div>
-
 
               </div>
 
@@ -1841,34 +1981,26 @@
 
             <div class="phone">
 
-
               <div class="phone-notch"></div>
 
 
               <div class="phone-screen">
 
-
                 <span class="phone-logo">
                   DSQuiz
                 </span>
 
-
                 <div class="phone-line"></div>
 
-                <div
-                  class="phone-line short"
-                ></div>
-
+                <div class="phone-line short"></div>
 
                 <div class="phone-option"></div>
 
                 <div class="phone-option"></div>
 
                 <div class="phone-option"></div>
-
 
               </div>
-
 
             </div>
 
@@ -1897,8 +2029,8 @@
 
 
             <p data-i18n="project2">
-              A mobile learning application designed to
-              support data structures and algorithms education.
+              A mobile learning application designed to support
+              data structures and algorithms education.
             </p>
 
 
@@ -1941,27 +2073,18 @@
 
             <div class="form-preview">
 
-
               <div class="form-title"></div>
 
-
               <div class="form-label"></div>
-
               <div class="form-input"></div>
 
-
               <div class="form-label"></div>
-
               <div class="form-input"></div>
 
-
               <div class="form-label"></div>
-
               <div class="form-input"></div>
-
 
               <div class="form-button"></div>
-
 
             </div>
 
@@ -2077,7 +2200,6 @@
 
           <div class="experience-content">
 
-
             <h3 data-i18n="internTitle">
               Software Development Intern
             </h3>
@@ -2097,16 +2219,13 @@
               authentication and application architecture.
             </p>
 
-
           </div>
 
 
           <div class="experience-tech">
 
             <span>React</span>
-
             <span>PostgreSQL</span>
-
             <span>Supabase</span>
 
           </div>
@@ -2126,7 +2245,6 @@
 
           <div class="experience-content">
 
-
             <h3 data-i18n="huaweiTitle">
               Core Team Member
             </h3>
@@ -2145,14 +2263,12 @@
               cloud technologies and collaborative projects.
             </p>
 
-
           </div>
 
 
           <div class="experience-tech">
 
             <span>Cloud</span>
-
             <span>Community</span>
 
           </div>
@@ -2172,36 +2288,197 @@
     <!-- TECHNOLOGIES -->
     <!-- ================================================== -->
 
-    <section class="section skills-section">
+    <section
+      class="section skills-section"
+      id="skills"
+    >
 
 
-      <p
-        class="section-kicker"
-        data-i18n="technologies"
-      >
-        Technologies
-      </p>
+      <div class="section-header skills-header">
 
 
-      <div class="skills-list">
+        <div>
 
-        <span>React</span>
+          <p
+            class="section-kicker"
+            data-i18n="technologies"
+          >
+            Technologies
+          </p>
 
-        <span>JavaScript</span>
 
-        <span>Node.js</span>
+          <h2 data-i18n="skillsHeading">
+            Tools & technologies I work with.
+          </h2>
 
-        <span>PostgreSQL</span>
+        </div>
 
-        <span>Supabase</span>
 
-        <span>Java</span>
+      </div>
 
-        <span>Python</span>
 
-        <span>Git</span>
 
-        <span>REST APIs</span>
+      <div class="skills-grid">
+
+
+        <!-- LANGUAGES -->
+
+        <div class="skill-group">
+
+          <p
+            class="skill-group-title"
+            data-i18n="languagesLabel"
+          >
+            Languages
+          </p>
+
+
+          <div class="skill-items">
+
+            <span>JavaScript</span>
+            <span>Java</span>
+            <span>Python</span>
+            <span>C</span>
+            <span>C#</span>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- FRONTEND -->
+
+        <div class="skill-group">
+
+          <p
+            class="skill-group-title"
+            data-i18n="frontendLabel"
+          >
+            Frontend
+          </p>
+
+
+          <div class="skill-items">
+
+            <span>React</span>
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>Tailwind CSS</span>
+            <span>Bootstrap</span>
+            <span>Vite</span>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- BACKEND -->
+
+        <div class="skill-group">
+
+          <p
+            class="skill-group-title"
+            data-i18n="backendLabel"
+          >
+            Backend & Databases
+          </p>
+
+
+          <div class="skill-items">
+
+            <span>Node.js</span>
+            <span>REST APIs</span>
+            <span>Supabase</span>
+            <span>PostgreSQL</span>
+            <span>MySQL</span>
+            <span>SQLite</span>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- SECURITY / CLOUD -->
+
+        <div class="skill-group">
+
+          <p
+            class="skill-group-title"
+            data-i18n="cloudLabel"
+          >
+            Cloud, Systems & Security
+          </p>
+
+
+          <div class="skill-items">
+
+            <span>Huawei Cloud</span>
+            <span>Linux</span>
+            <span>FortiGate</span>
+            <span>TCP/IP</span>
+            <span>Nmap</span>
+            <span>Row Level Security</span>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- TOOLS -->
+
+        <div class="skill-group">
+
+          <p
+            class="skill-group-title"
+            data-i18n="toolsLabel"
+          >
+            Tools
+          </p>
+
+
+          <div class="skill-items">
+
+            <span>Git</span>
+            <span>GitHub</span>
+            <span>Postman</span>
+            <span>VS Code</span>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- CONCEPTS -->
+
+        <div class="skill-group">
+
+          <p
+            class="skill-group-title"
+            data-i18n="conceptsLabel"
+          >
+            Concepts
+          </p>
+
+
+          <div class="skill-items">
+
+            <span>CRUD</span>
+            <span>Authentication</span>
+            <span>Role-Based Access</span>
+            <span>Relational Database Design</span>
+            <span>Responsive Design</span>
+            <span>Data Structures</span>
+            <span>Algorithms</span>
+
+          </div>
+
+        </div>
+
 
       </div>
 
@@ -2288,7 +2565,6 @@
 
         <div class="form-field">
 
-
           <label
             for="name"
             data-i18n="formName"
@@ -2302,16 +2578,16 @@
             name="name"
             type="text"
             placeholder="Your name"
+            data-placeholder-en="Your name"
+            data-placeholder-tr="Adınız"
             required
           />
-
 
         </div>
 
 
 
         <div class="form-field">
-
 
           <label
             for="email"
@@ -2329,13 +2605,11 @@
             required
           />
 
-
         </div>
 
 
 
         <div class="form-field">
-
 
           <label
             for="message"
@@ -2350,9 +2624,10 @@
             name="message"
             rows="5"
             placeholder="Write your message..."
+            data-placeholder-en="Write your message..."
+            data-placeholder-tr="Mesajınızı yazın..."
             required
           ></textarea>
-
 
         </div>
 
@@ -2391,7 +2666,6 @@
 
   <footer>
 
-
     <span>
       © 2026 Ceyda Gezer
     </span>
@@ -2400,7 +2674,6 @@
     <span data-i18n="footer">
       Computer Engineering · Software Development
     </span>
-
 
   </footer>
 
@@ -2462,7 +2735,7 @@
           "Projects I've built.",
 
         viewGithub:
-          "View GitHub →",
+          "View all projects on GitHub ↗",
 
 
         project1:
@@ -2496,6 +2769,27 @@
 
         technologies:
           "Technologies",
+
+        skillsHeading:
+          "Tools & technologies I work with.",
+
+        languagesLabel:
+          "Languages",
+
+        frontendLabel:
+          "Frontend",
+
+        backendLabel:
+          "Backend & Databases",
+
+        cloudLabel:
+          "Cloud, Systems & Security",
+
+        toolsLabel:
+          "Tools",
+
+        conceptsLabel:
+          "Concepts",
 
 
         contactKicker:
@@ -2575,7 +2869,7 @@
           "Geliştirdiğim projeler.",
 
         viewGithub:
-          "GitHub'ı Gör →",
+          "GitHub'da tüm projeleri gör ↗",
 
 
         project1:
@@ -2609,6 +2903,27 @@
 
         technologies:
           "Teknolojiler",
+
+        skillsHeading:
+          "Kullandığım araçlar ve teknolojiler.",
+
+        languagesLabel:
+          "Programlama Dilleri",
+
+        frontendLabel:
+          "Frontend",
+
+        backendLabel:
+          "Backend & Veritabanları",
+
+        cloudLabel:
+          "Bulut, Sistem & Güvenlik",
+
+        toolsLabel:
+          "Araçlar",
+
+        conceptsLabel:
+          "Kavramlar",
 
 
         contactKicker:
@@ -2645,9 +2960,8 @@
     };
 
 
-
     /* ==================================================== */
-    /* LANGUAGE SWITCH */
+    /* LANGUAGE */
     /* ==================================================== */
 
     const languageButtons =
@@ -2659,7 +2973,8 @@
     function changeLanguage(language) {
 
       const dictionary =
-        translations[language];
+        translations[language] ||
+        translations.en;
 
 
       document
@@ -2680,6 +2995,34 @@
           }
 
         });
+
+
+      const nameInput =
+        document.getElementById("name");
+
+
+      const messageInput =
+        document.getElementById("message");
+
+
+      if (nameInput) {
+
+        nameInput.placeholder =
+          language === "tr"
+            ? nameInput.dataset.placeholderTr
+            : nameInput.dataset.placeholderEn;
+
+      }
+
+
+      if (messageInput) {
+
+        messageInput.placeholder =
+          language === "tr"
+            ? messageInput.dataset.placeholderTr
+            : messageInput.dataset.placeholderEn;
+
+      }
 
 
       languageButtons.forEach(
@@ -2725,7 +3068,6 @@
     );
 
 
-
     const savedLanguage =
       localStorage.getItem(
         "portfolioLanguage"
@@ -2735,7 +3077,6 @@
     changeLanguage(
       savedLanguage
     );
-
 
 
     /* ==================================================== */
@@ -2748,58 +3089,60 @@
       );
 
 
-    contactForm.addEventListener(
-      "submit",
-      (event) => {
+    if (contactForm) {
 
-        event.preventDefault();
+      contactForm.addEventListener(
+        "submit",
+        (event) => {
 
-
-        const formData =
-          new FormData(
-            contactForm
-          );
+          event.preventDefault();
 
 
-        const name =
-          String(
-            formData.get("name") || ""
-          ).trim();
+          const formData =
+            new FormData(
+              contactForm
+            );
 
 
-        const email =
-          String(
-            formData.get("email") || ""
-          ).trim();
+          const name =
+            String(
+              formData.get("name") || ""
+            ).trim();
 
 
-        const message =
-          String(
-            formData.get("message") || ""
-          ).trim();
+          const email =
+            String(
+              formData.get("email") || ""
+            ).trim();
 
 
-        const language =
-          localStorage.getItem(
-            "portfolioLanguage"
-          ) || "en";
+          const message =
+            String(
+              formData.get("message") || ""
+            ).trim();
 
 
-        const subject =
-          language === "tr"
-            ? `Portfolyo mesajı - ${name}`
-            : `Portfolio message - ${name}`;
+          const language =
+            localStorage.getItem(
+              "portfolioLanguage"
+            ) || "en";
 
 
-        const body =
-          language === "tr"
-            ? `Ad: ${name}
+          const subject =
+            language === "tr"
+              ? `Portfolyo mesajı - ${name}`
+              : `Portfolio message - ${name}`;
+
+
+          const body =
+            language === "tr"
+              ? `Ad: ${name}
 
 E-posta: ${email}
 
 Mesaj:
 ${message}`
-            : `Name: ${name}
+              : `Name: ${name}
 
 Email: ${email}
 
@@ -2807,17 +3150,19 @@ Message:
 ${message}`;
 
 
-        const mailto =
-          "mailto:gezerceyda17@gmail.com" +
-          `?subject=${encodeURIComponent(subject)}` +
-          `&body=${encodeURIComponent(body)}`;
+          const mailto =
+            "mailto:gezerceyda17@gmail.com" +
+            `?subject=${encodeURIComponent(subject)}` +
+            `&body=${encodeURIComponent(body)}`;
 
 
-        window.location.href =
-          mailto;
+          window.location.href =
+            mailto;
 
-      }
-    );
+        }
+      );
+
+    }
 
   </script>
 
