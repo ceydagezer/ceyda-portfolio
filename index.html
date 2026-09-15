@@ -1,37 +1,727 @@
-<header class="top-nav">
-  <div class="nav-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <a href="#home" class="logo">
-      CG
-    </a>
+  <title>Ceyda Gezer | Software Developer</title>
 
-    <div class="nav-right">
+  <meta
+    name="description"
+    content="Ceyda Gezer - Computer Engineering student and full-stack developer building practical web and mobile software projects."
+  />
 
-      <nav class="nav-links">
-        <a href="#home" data-i18n="navHome">Home</a>
-        <a href="#work" data-i18n="navProjects">Projects</a>
-        <a href="#experience" data-i18n="navExperience">Experience</a>
-        <a
-          href="https://medium.com/@gezerceyda17"
-          target="_blank"
-          data-i18n="navWriting"
+  <meta
+    name="keywords"
+    content="Ceyda Gezer, Computer Engineering, Full Stack Developer, React, JavaScript, Node.js, PostgreSQL, Supabase"
+  />
+
+  <meta name="author" content="Ceyda Gezer" />
+
+  <link rel="stylesheet" href="./style.css?v=12" />
+  <script src="./script.js?v=12" defer></script>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="top-nav">
+    <div class="nav-container">
+
+      <a href="#home" class="logo" aria-label="Ceyda Gezer home">
+        CG
+      </a>
+
+      <div class="nav-right">
+
+        <nav class="nav-links" aria-label="Main navigation">
+
+          <a href="#home" data-i18n="navHome">
+            Home
+          </a>
+
+          <a href="#work" data-i18n="navProjects">
+            Projects
+          </a>
+
+          <a href="#experience" data-i18n="navExperience">
+            Experience
+          </a>
+
+          <a
+            href="https://medium.com/@gezerceyda17"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="navWriting"
+          >
+            Writing ↗
+          </a>
+
+          <a href="#contact" data-i18n="navContact">
+            Contact
+          </a>
+
+        </nav>
+
+        <div class="language-switch" aria-label="Language">
+
+          <button
+            class="lang-button active"
+            type="button"
+            data-lang="en"
+          >
+            EN
+          </button>
+
+          <button
+            class="lang-button"
+            type="button"
+            data-lang="tr"
+          >
+            TR
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+    <section class="new-hero" id="home">
+
+      <div class="new-hero-content">
+
+        <p class="hero-overline" data-i18n="heroOverline">
+          COMPUTER ENGINEERING · SOFTWARE DEVELOPMENT
+        </p>
+
+        <h1>
+          <span data-i18n="heroHello">
+            Hi, I'm
+          </span>
+
+          <strong>
+            Ceyda Gezer.
+          </strong>
+        </h1>
+
+        <h2 data-i18n="heroTitle">
+          Computer Engineering student building full-stack software.
+        </h2>
+
+        <p
+          class="new-hero-description"
+          data-i18n="heroDescription"
         >
-          Writing ↗
-        </a>
-        <a href="#contact" data-i18n="navContact">Contact</a>
-      </nav>
+          I enjoy turning real-world problems into clean,
+          practical and reliable web applications.
+        </p>
 
-      <div class="language-switch">
-        <button class="lang-button active" data-lang="en">
-          EN
-        </button>
 
-        <button class="lang-button" data-lang="tr">
-          TR
-        </button>
+        <div class="hero-tech">
+          <span>React</span>
+          <span>JavaScript</span>
+          <span>Node.js</span>
+          <span>PostgreSQL</span>
+        </div>
+
+
+        <div class="hero-actions">
+
+          <a
+            href="#work"
+            class="button button-primary"
+            data-i18n="viewProjects"
+          >
+            View Projects
+          </a>
+
+          <a
+            href="https://github.com/ceydagezer"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button-secondary"
+          >
+            GitHub ↗
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/ceydagezer-312858234/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button-secondary"
+          >
+            LinkedIn ↗
+          </a>
+
+        </div>
+
       </div>
 
-    </div>
 
-  </div>
-</header>
+      <div class="new-hero-photo">
+
+        <div class="photo-shape">
+
+          <img
+            src="./ceyda.jpg"
+            alt="Ceyda Gezer"
+          />
+
+        </div>
+
+        <div
+          class="availability-badge"
+          data-i18n="available"
+        >
+          ● available for opportunities
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SELECTED WORK -->
+    <section class="work-section" id="work">
+
+      <div class="section-heading">
+
+        <div>
+
+          <p
+            class="section-kicker"
+            data-i18n="selectedWork"
+          >
+            Selected work
+          </p>
+
+          <h2 data-i18n="projectsHeading">
+            Projects I've built.
+          </h2>
+
+        </div>
+
+        <a
+          href="./projects.html"
+          class="text-link"
+          data-i18n="allProjects"
+        >
+          All projects →
+        </a>
+
+      </div>
+
+
+      <div class="project-grid">
+
+        <!-- PROJECT 1 -->
+        <article class="project-card">
+
+          <div
+            class="project-preview panel-preview"
+            aria-hidden="true"
+          >
+
+            <div class="fake-sidebar">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="fake-dashboard">
+
+              <div class="fake-header"></div>
+
+              <div class="fake-stats">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <div class="fake-table">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="project-content">
+
+            <div class="project-topline">
+              <span>01</span>
+              <span>Full Stack</span>
+            </div>
+
+            <h3>
+              Education Management Panel
+            </h3>
+
+            <p data-i18n="project1Description">
+              A management platform for students, teachers,
+              scheduling, packages, payments and reporting.
+            </p>
+
+            <div class="tech-list">
+              <span>React</span>
+              <span>JavaScript</span>
+              <span>PostgreSQL</span>
+              <span>Supabase</span>
+            </div>
+
+            <div class="project-links">
+
+              <a
+                href="https://github.com/ceydagezer/education-management-panel"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub ↗
+              </a>
+
+              <a
+                href="./projects.html#education-management-panel"
+                data-i18n="details"
+              >
+                Details →
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 2 -->
+        <article class="project-card">
+
+          <div
+            class="project-preview mobile-preview"
+            aria-hidden="true"
+          >
+
+            <div class="phone">
+
+              <div class="phone-top"></div>
+
+              <div class="phone-content">
+
+                <span class="quiz-label">
+                  DSQuiz
+                </span>
+
+                <div class="quiz-line"></div>
+                <div class="quiz-line short"></div>
+
+                <div class="quiz-option"></div>
+                <div class="quiz-option"></div>
+                <div class="quiz-option"></div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="project-content">
+
+            <div class="project-topline">
+              <span>02</span>
+              <span>Android</span>
+            </div>
+
+            <h3>
+              DSQuiz
+            </h3>
+
+            <p data-i18n="project2Description">
+              A mobile learning application designed to support
+              data structures and algorithms education.
+            </p>
+
+            <div class="tech-list">
+              <span>Kotlin</span>
+              <span>Android</span>
+              <span>DSA</span>
+            </div>
+
+            <div class="project-links">
+
+              <a
+                href="https://github.com/ceydagezer/dsquiz-android-app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub ↗
+              </a>
+
+              <a
+                href="./projects.html#dsquiz"
+                data-i18n="details"
+              >
+                Details →
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 3 -->
+        <article class="project-card">
+
+          <div
+            class="project-preview form-preview"
+            aria-hidden="true"
+          >
+
+            <div class="fake-form">
+
+              <span class="fake-title"></span>
+
+              <label></label>
+              <div></div>
+
+              <label></label>
+              <div></div>
+
+              <label></label>
+              <div></div>
+
+              <button></button>
+
+            </div>
+
+          </div>
+
+
+          <div class="project-content">
+
+            <div class="project-topline">
+              <span>03</span>
+              <span>Frontend</span>
+            </div>
+
+            <h3>
+              Registration Form Comparison
+            </h3>
+
+            <p data-i18n="project3Description">
+              A responsive interface project comparing Bootstrap
+              and handcrafted HTML/CSS approaches.
+            </p>
+
+            <div class="tech-list">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>Bootstrap</span>
+            </div>
+
+            <div class="project-links">
+
+              <a
+                href="https://github.com/ceydagezer/registration-form-comparison"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub ↗
+              </a>
+
+              <a
+                href="./projects.html#registration-form-comparison"
+                data-i18n="details"
+              >
+                Details →
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- EXPERIENCE -->
+    <section class="experience-section" id="experience">
+
+      <div class="section-heading">
+
+        <div>
+
+          <p
+            class="section-kicker"
+            data-i18n="experienceKicker"
+          >
+            Experience
+          </p>
+
+          <h2 data-i18n="experienceHeading">
+            A little about what I've done.
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div class="experience-list">
+
+        <article class="experience-row">
+
+          <div class="experience-date">
+            2026
+          </div>
+
+          <div class="experience-content">
+
+            <h3 data-i18n="internTitle">
+              Software Development Intern
+            </h3>
+
+            <p class="experience-company">
+              KOD286 Computer Consulting & Software
+            </p>
+
+            <p data-i18n="internDescription">
+              Developed a full-stack education management platform
+              and worked with relational databases, authentication,
+              CRUD operations and application architecture.
+            </p>
+
+          </div>
+
+          <div class="experience-tags">
+            <span>React</span>
+            <span>PostgreSQL</span>
+            <span>Supabase</span>
+          </div>
+
+        </article>
+
+
+        <article class="experience-row">
+
+          <div class="experience-date">
+            2025 —
+          </div>
+
+          <div class="experience-content">
+
+            <h3 data-i18n="huaweiTitle">
+              Core Team Member
+            </h3>
+
+            <p class="experience-company">
+              Huawei Student Developers Çanakkale
+            </p>
+
+            <p data-i18n="huaweiDescription">
+              Contributing to technical community activities,
+              cloud technologies and collaborative projects.
+            </p>
+
+          </div>
+
+          <div class="experience-tags">
+            <span>Cloud</span>
+            <span>Community</span>
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+    <section class="skills-section">
+
+      <p
+        class="section-kicker"
+        data-i18n="technologies"
+      >
+        Technologies
+      </p>
+
+      <div class="skills-track">
+        <span>React</span>
+        <span>JavaScript</span>
+        <span>Node.js</span>
+        <span>PostgreSQL</span>
+        <span>Supabase</span>
+        <span>Java</span>
+        <span>Python</span>
+        <span>Git</span>
+        <span>REST APIs</span>
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+
+      <div class="contact-copy">
+
+        <p
+          class="section-kicker"
+          data-i18n="contactKicker"
+        >
+          Contact
+        </p>
+
+        <h2 data-i18n="contactHeading">
+          Let's talk.
+        </h2>
+
+        <p data-i18n="contactDescription">
+          Have an internship opportunity, project, question
+          or simply want to connect? Send me a message.
+        </p>
+
+        <div class="contact-social">
+
+          <a href="mailto:gezerceyda17@gmail.com">
+            Email ↗
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/ceydagezer-312858234/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn ↗
+          </a>
+
+          <a
+            href="https://github.com/ceydagezer"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub ↗
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <form class="contact-form" id="contactForm">
+
+        <div class="form-field">
+
+          <label
+            for="name"
+            data-i18n="formName"
+          >
+            Name
+          </label>
+
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Your name"
+            data-i18n-placeholder="formNamePlaceholder"
+            required
+          />
+
+        </div>
+
+
+        <div class="form-field">
+
+          <label
+            for="email"
+            data-i18n="formEmail"
+          >
+            Email
+          </label>
+
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="you@example.com"
+            required
+          />
+
+        </div>
+
+
+        <div class="form-field">
+
+          <label
+            for="message"
+            data-i18n="formMessage"
+          >
+            Message
+          </label>
+
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Write your message..."
+            data-i18n-placeholder="formMessagePlaceholder"
+            required
+          ></textarea>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="button button-light"
+          data-i18n="sendMessage"
+        >
+          Send message
+        </button>
+
+        <p
+          class="form-note"
+          data-i18n="formNote"
+        >
+          This currently opens your email app with the message prepared.
+        </p>
+
+      </form>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <span>
+      © 2026 Ceyda Gezer
+    </span>
+
+    <span data-i18n="footerText">
+      Computer Engineering · Software Development
+    </span>
+
+  </footer>
+
+</body>
+</html>
