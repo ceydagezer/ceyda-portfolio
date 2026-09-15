@@ -1,638 +1,584 @@
-:root {
-  --bg: #111111;
-  --bg-soft: #1a1a1a;
-  --text: #e5e5e5;
-  --text-soft: #c7c7c7;
-  --accent: #d9d9d9;
-  --accent-soft: rgba(255, 255, 255, 0.05);
-  --border: #2d2d2d;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-/* GENERAL */
+  <title>Ceyda Gezer | Software Developer</title>
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+  <meta
+    name="description"
+    content="Ceyda Gezer - Computer Engineering student and full-stack developer building web and mobile software projects."
+  />
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px;
-}
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: var(--bg);
-  color: var(--text);
+<body>
 
-  min-height: 100vh;
+  <!-- NAVBAR -->
+  <header class="top-nav">
+    <div class="nav-container">
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+      <a href="#home" class="logo">
+        CG
+      </a>
 
-  padding: 72px 12px 48px;
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#work">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="https://medium.com/@gezerceyda17" target="_blank">
+          Writing ↗
+        </a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-  line-height: 1.55;
-}
+    </div>
+  </header>
 
-a {
-  color: inherit;
-}
 
+  <main>
 
-/* ====================== */
-/* NAVBAR */
-/* ====================== */
+    <!-- HERO -->
+    <section class="hero" id="home">
 
-.top-nav {
-  width: 100%;
-  background: #050505;
-  border-bottom: 1px solid #2c2c2c;
+      <div class="hero-side hero-left">
 
-  padding: 10px 0;
+        <p class="hero-eyebrow">Computer Engineering</p>
 
-  position: fixed;
-  top: 0;
-  left: 0;
+        <h1>
+          student<span>.</span>
+        </h1>
 
-  z-index: 999;
-}
+        <p class="hero-short">
+          Interested in software engineering,
+          algorithms, databases and cloud technologies.
+        </p>
 
-.nav-container {
-  max-width: 1100px;
-  width: 100%;
+      </div>
 
-  margin: 0 auto;
-  padding: 0 24px;
 
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
+      <div class="hero-photo-area">
 
-.nav-links {
-  display: flex;
-  gap: 24px;
-  align-items: center;
+        <div class="hero-photo-frame">
+          <img
+            src="ceyda.jpg"
+            alt="Ceyda Gezer"
+          />
+        </div>
 
-  font-size: 0.9rem;
-}
+        <span class="hero-status">
+          available for opportunities
+        </span>
 
-.nav-item {
-  position: relative;
-}
+      </div>
 
-.nav-item > a {
-  color: var(--text-soft);
-  text-decoration: none;
 
-  padding: 4px 0;
+      <div class="hero-side hero-right">
 
-  display: inline-block;
+        <p class="hero-eyebrow">Software Development</p>
 
-  transition: 0.2s ease;
-}
+        <h1>
+          &lt;developer&gt;
+        </h1>
 
-.nav-item > a:hover {
-  color: var(--text);
-}
+        <p class="hero-short">
+          Building full-stack applications with
+          React, JavaScript, Node.js and PostgreSQL.
+        </p>
 
+      </div>
 
-/* Dropdown */
+    </section>
 
-.nav-dropdown {
-  position: absolute;
 
-  top: 100%;
-  left: 0;
+    <!-- HERO CTA -->
+    <section class="intro">
 
-  min-width: 250px;
+      <p class="intro-label">
+        Hi, I'm Ceyda.
+      </p>
 
-  background: #181818;
+      <h2>
+        I build practical software
+        <span>and enjoy understanding how things work.</span>
+      </h2>
 
-  border-radius: 12px;
-  border: 1px solid var(--border);
+      <div class="intro-actions">
 
-  padding: 6px 0;
+        <a href="#work" class="button button-primary">
+          View my work
+        </a>
 
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+        <a
+          href="https://github.com/ceydagezer"
+          target="_blank"
+          class="button button-secondary"
+        >
+          GitHub ↗
+        </a>
 
-  opacity: 0;
-  pointer-events: none;
+        <a
+          href="https://www.linkedin.com/in/ceydagezer-312858234/"
+          target="_blank"
+          class="button button-secondary"
+        >
+          LinkedIn ↗
+        </a>
 
-  transform: translateY(6px);
+      </div>
 
-  transition: 0.18s ease;
-}
+    </section>
 
-.nav-item:hover .nav-dropdown {
-  opacity: 1;
-  pointer-events: auto;
 
-  transform: translateY(0);
-}
+    <!-- SELECTED WORK -->
+    <section class="work-section" id="work">
 
-.nav-dropdown a {
-  display: block;
+      <div class="section-heading">
 
-  padding: 7px 14px;
+        <div>
+          <p class="section-kicker">Selected work</p>
+          <h2>Projects I've built.</h2>
+        </div>
 
-  font-size: 0.85rem;
+        <a href="projects.html" class="text-link">
+          All projects →
+        </a>
 
-  color: var(--text-soft);
-  text-decoration: none;
-}
+      </div>
 
-.nav-dropdown a:hover {
-  background: #222222;
-  color: var(--text);
-}
 
+      <div class="project-grid">
 
-/* ====================== */
-/* HERO */
-/* ====================== */
+        <!-- PROJECT 1 -->
+        <article class="project-card">
 
-.hero-wrapper {
-  width: 100%;
-  max-width: 1100px;
+          <div class="project-preview panel-preview">
 
-  display: flex;
-  justify-content: center;
-}
+            <div class="fake-sidebar">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
 
-.hero-card {
-  width: 100%;
+            <div class="fake-dashboard">
 
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
+              <div class="fake-header"></div>
 
-  gap: 20px;
+              <div class="fake-stats">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
 
-  background: var(--bg-soft);
+              <div class="fake-table">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
 
-  border-radius: 26px;
+            </div>
 
-  padding: 24px 22px;
+          </div>
 
-  border: 1px solid var(--border);
+          <div class="project-content">
 
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
-}
+            <div class="project-topline">
+              <span>01</span>
+              <span>Full Stack</span>
+            </div>
 
-.hero-content {
-  display: flex;
-  flex-direction: column;
+            <h3>Education Management Panel</h3>
 
-  gap: 14px;
+            <p>
+              A management platform for students, teachers,
+              scheduling, packages, payments and reporting.
+            </p>
 
-  justify-content: center;
-}
+            <div class="tech-list">
+              <span>React</span>
+              <span>JavaScript</span>
+              <span>PostgreSQL</span>
+              <span>Supabase</span>
+            </div>
 
+            <div class="project-links">
 
-/* Name */
+              <a
+                href="https://github.com/ceydagezer/education-management-panel"
+                target="_blank"
+              >
+                GitHub ↗
+              </a>
 
-.hero-name-row {
-  display: flex;
-  align-items: center;
+              <a href="projects.html">
+                Details →
+              </a>
 
-  gap: 10px;
-}
+            </div>
 
-.hero-dot {
-  width: 10px;
-  height: 10px;
+          </div>
 
-  border-radius: 999px;
+        </article>
 
-  background: var(--accent);
 
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
-}
+        <!-- PROJECT 2 -->
+        <article class="project-card">
 
-.hero-title-block {
-  display: flex;
+          <div class="project-preview mobile-preview">
 
-  align-items: baseline;
+            <div class="phone">
 
-  gap: 8px;
-}
+              <div class="phone-top"></div>
 
-.hello-text {
-  font-size: clamp(1.8rem, 3vw, 2.2rem);
+              <div class="phone-content">
 
-  font-weight: 700;
+                <span class="quiz-label">
+                  DSQuiz
+                </span>
 
-  color: var(--text);
-}
+                <div class="quiz-line"></div>
+                <div class="quiz-line short"></div>
 
-.hero-name {
-  font-size: clamp(1.8rem, 3vw, 2.2rem);
+                <div class="quiz-option"></div>
+                <div class="quiz-option"></div>
+                <div class="quiz-option"></div>
 
-  font-weight: 700;
-}
+              </div>
 
-.hero-title {
-  font-size: 0.95rem;
+            </div>
 
-  color: var(--text-soft);
-}
+          </div>
 
-.hero-title span {
-  color: var(--accent);
-}
+          <div class="project-content">
 
+            <div class="project-topline">
+              <span>02</span>
+              <span>Android</span>
+            </div>
 
-/* Tags */
+            <h3>DSQuiz</h3>
 
-.hero-tags {
-  display: flex;
+            <p>
+              A mobile learning application designed to support
+              data structures and algorithms education.
+            </p>
 
-  flex-wrap: wrap;
+            <div class="tech-list">
+              <span>Kotlin</span>
+              <span>Android</span>
+              <span>DSA</span>
+            </div>
 
-  gap: 8px;
-}
+            <div class="project-links">
 
-.hero-tag {
-  font-size: 0.75rem;
+              <a
+                href="https://github.com/ceydagezer/dsquiz-android-app"
+                target="_blank"
+              >
+                GitHub ↗
+              </a>
 
-  padding: 4px 10px;
+              <a href="projects.html">
+                Details →
+              </a>
 
-  border-radius: 999px;
+            </div>
 
-  border: 1px solid #2a2a2a;
+          </div>
 
-  background: #111111;
+        </article>
 
-  color: var(--text-soft);
-}
 
+        <!-- PROJECT 3 -->
+        <article class="project-card">
 
-/* Hero text */
+          <div class="project-preview form-preview">
 
-.hero-description {
-  font-size: 0.9rem;
+            <div class="fake-form">
 
-  color: #dcdcdc;
+              <span class="fake-title"></span>
 
-  max-width: 520px;
-}
+              <label></label>
+              <div></div>
 
-.hero-highlight {
-  color: var(--accent);
+              <label></label>
+              <div></div>
 
-  font-weight: 500;
-}
+              <label></label>
+              <div></div>
 
-.hero-list {
-  margin-left: 18px;
+              <button></button>
 
-  color: var(--text-soft);
+            </div>
 
-  font-size: 0.9rem;
+          </div>
 
-  display: flex;
+          <div class="project-content">
 
-  flex-direction: column;
+            <div class="project-topline">
+              <span>03</span>
+              <span>Frontend</span>
+            </div>
 
-  gap: 4px;
-}
+            <h3>Registration Form Comparison</h3>
 
+            <p>
+              A responsive interface project comparing
+              Bootstrap and handcrafted HTML/CSS approaches.
+            </p>
 
-/* Social buttons */
+            <div class="tech-list">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>Bootstrap</span>
+            </div>
 
-.hero-social {
-  display: flex;
+            <div class="project-links">
 
-  flex-wrap: wrap;
+              <a
+                href="https://github.com/ceydagezer/registration-form-comparison"
+                target="_blank"
+              >
+                GitHub ↗
+              </a>
 
-  gap: 10px;
+              <a href="projects.html">
+                Details →
+              </a>
 
-  margin-top: 6px;
-}
+            </div>
 
-.hero-social a {
-  font-size: 0.85rem;
+          </div>
 
-  padding: 7px 12px;
+        </article>
 
-  border-radius: 999px;
+      </div>
 
-  border: 1px solid #2d2d2d;
+    </section>
 
-  color: var(--text);
 
-  background: #111111;
+    <!-- EXPERIENCE -->
+    <section class="experience-section" id="experience">
 
-  display: inline-flex;
+      <div class="section-heading">
 
-  align-items: center;
+        <div>
+          <p class="section-kicker">Experience</p>
+          <h2>A little about what I've done.</h2>
+        </div>
 
-  gap: 6px;
+      </div>
 
-  text-decoration: none;
 
-  transition: 0.18s ease;
-}
+      <div class="experience-list">
 
-.hero-social a:hover {
-  border-color: #e4e4e4;
+        <article class="experience-row">
 
-  color: #ffffff;
+          <div class="experience-date">
+            2026
+          </div>
 
-  background: #ffffff10;
-}
+          <div class="experience-content">
 
-.icon img {
-  display: block;
-}
+            <h3>
+              Software Development Intern
+            </h3>
 
+            <p class="experience-company">
+              KOD286 Computer Consulting & Software
+            </p>
 
-/* Avatar */
+            <p>
+              Developed a full-stack education management
+              platform and worked with relational databases,
+              authentication, CRUD operations and application architecture.
+            </p>
 
-.hero-avatar-wrapper {
-  display: flex;
+          </div>
 
-  justify-content: center;
+          <div class="experience-tags">
+            <span>React</span>
+            <span>PostgreSQL</span>
+            <span>Supabase</span>
+          </div>
 
-  align-items: center;
-}
+        </article>
 
-.hero-avatar-card {
-  position: relative;
 
-  width: 220px;
-  height: 220px;
+        <article class="experience-row">
 
-  border-radius: 999px;
+          <div class="experience-date">
+            2025 —
+          </div>
 
-  padding: 4px;
+          <div class="experience-content">
 
-  background: radial-gradient(
-    circle at center,
-    #333,
-    #1a1a1a 75%
-  );
+            <h3>
+              Core Team Member
+            </h3>
 
-  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.9);
-}
+            <p class="experience-company">
+              Huawei Student Developers Çanakkale
+            </p>
 
-.hero-avatar-inner {
-  width: 100%;
-  height: 100%;
+            <p>
+              Contributing to technical community activities,
+              cloud technologies and collaborative projects.
+            </p>
 
-  border-radius: 999px;
+          </div>
 
-  overflow: hidden;
+          <div class="experience-tags">
+            <span>Cloud</span>
+            <span>Community</span>
+          </div>
 
-  border: 2px solid #2e2e2e;
+        </article>
 
-  background: #0f0f0f;
+      </div>
 
-  display: flex;
+    </section>
 
-  align-items: center;
 
-  justify-content: center;
-}
+    <!-- SKILLS -->
+    <section class="skills-section">
 
-.hero-avatar-inner img {
-  width: 100%;
-  height: 100%;
+      <p class="section-kicker">
+        Technologies
+      </p>
 
-  object-fit: cover;
-}
+      <div class="skills-track">
+        <span>React</span>
+        <span>JavaScript</span>
+        <span>Node.js</span>
+        <span>PostgreSQL</span>
+        <span>Supabase</span>
+        <span>Java</span>
+        <span>Python</span>
+        <span>Git</span>
+        <span>REST APIs</span>
+      </div>
 
-.hero-avatar-badge {
-  position: absolute;
+    </section>
 
-  bottom: 12px;
-  right: 12px;
 
-  padding: 5px 10px;
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
 
-  border-radius: 999px;
+      <div class="contact-copy">
 
-  background: rgba(255, 255, 255, 0.08);
+        <p class="section-kicker">
+          Contact
+        </p>
 
-  border: 1px solid #e4e4e4;
+        <h2>
+          Let's build something.
+        </h2>
 
-  color: #ffffff;
+        <p>
+          Have an internship opportunity, project,
+          question or simply want to connect?
+          Send me a message.
+        </p>
 
-  font-size: 0.7rem;
+        <div class="contact-social">
 
-  text-transform: uppercase;
+          <a
+            href="mailto:gezerceyda17@gmail.com"
+          >
+            Email ↗
+          </a>
 
-  letter-spacing: 0.08em;
+          <a
+            href="https://www.linkedin.com/in/ceydagezer-312858234/"
+            target="_blank"
+          >
+            LinkedIn ↗
+          </a>
 
-  backdrop-filter: blur(8px);
-}
+          <a
+            href="https://github.com/ceydagezer"
+            target="_blank"
+          >
+            GitHub ↗
+          </a>
 
-.hero-footnote {
-  margin-top: 4px;
+        </div>
 
-  font-size: 0.75rem;
+      </div>
 
-  color: var(--text-soft);
-}
 
+      <form class="contact-form">
 
-/* ====================== */
-/* SECTIONS */
-/* ====================== */
+        <div class="form-field">
+          <label for="name">Name</label>
 
-.section-card {
-  width: 100%;
-  max-width: 1100px;
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Your name"
+            required
+          />
+        </div>
 
-  margin-top: 28px;
 
-  background: var(--bg-soft);
+        <div class="form-field">
+          <label for="email">Email</label>
 
-  border-radius: 24px;
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="you@example.com"
+            required
+          />
+        </div>
 
-  padding: 22px 24px;
 
-  border: 1px solid var(--border);
+        <div class="form-field">
 
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.75);
-}
+          <label for="message">
+            Message
+          </label>
 
-.section-title {
-  font-size: 1.2rem;
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Write your message..."
+            required
+          ></textarea>
 
-  margin-bottom: 10px;
+        </div>
 
-  color: var(--text);
-}
+        <button type="submit" class="button button-primary">
+          Send message
+        </button>
 
+      </form>
 
-/* ====================== */
-/* NORMAL CONTENT */
-/* NO INNER CARDS */
-/* ====================== */
+    </section>
 
-.info-list {
-  list-style: disc;
+  </main>
 
-  margin-left: 22px;
 
-  font-size: 0.9rem;
+  <!-- FOOTER -->
+  <footer>
 
-  color: var(--text-soft);
+    <span>
+      © 2026 Ceyda Gezer
+    </span>
 
-  display: block;
-}
+    <span>
+      Computer Engineering · Software Development
+    </span>
 
-.info-list li {
-  padding: 0;
+  </footer>
 
-  background: transparent;
-
-  border: none;
-
-  border-radius: 0;
-
-  box-shadow: none;
-
-  line-height: 1.55;
-}
-
-.info-list li + li {
-  margin-top: 10px;
-}
-
-.info-list strong {
-  color: var(--text);
-}
-
-
-/* ====================== */
-/* LINKS */
-/* ====================== */
-
-.info-list a,
-.info-list a:visited {
-  color: var(--text);
-
-  text-decoration: underline;
-
-  text-decoration-color: #666666;
-
-  text-underline-offset: 3px;
-}
-
-.info-list a:hover {
-  color: #ffffff;
-
-  text-decoration-color: #ffffff;
-}
-
-
-/* Projects */
-
-#projects .info-list li {
-  margin-bottom: 12px;
-}
-
-#projects .info-list li:last-child {
-  margin-bottom: 0;
-}
-
-
-/* Experience */
-
-#experience .info-list li {
-  margin-bottom: 14px;
-}
-
-#experience .info-list li:last-child {
-  margin-bottom: 0;
-}
-
-
-/* Blog */
-
-#blog .info-list li {
-  margin-bottom: 8px;
-}
-
-#blog .info-list li:last-child {
-  margin-bottom: 0;
-}
-
-
-/* Contact */
-
-#contact .info-list li {
-  margin-bottom: 8px;
-}
-
-#contact .info-list li:last-child {
-  margin-bottom: 0;
-}
-
-
-/* ====================== */
-/* RESPONSIVE */
-/* ====================== */
-
-@media (max-width: 768px) {
-
-  .hero-card {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-avatar-wrapper {
-    order: -1;
-  }
-
-  .nav-container {
-    justify-content: center;
-
-    padding: 0 12px;
-  }
-
-  .nav-links {
-    gap: 14px;
-
-    font-size: 0.82rem;
-  }
-
-  .section-card {
-    padding: 20px 18px;
-  }
-
-  .hero-title-block {
-    flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 480px) {
-
-  body {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .hero-card {
-    padding: 20px 18px;
-  }
-
-  .hero-avatar-card {
-    width: 180px;
-    height: 180px;
-  }
-
-  .nav-links {
-    gap: 10px;
-
-    font-size: 0.76rem;
-  }
-
-  .hero-social a {
-    font-size: 0.8rem;
-  }
-}
+</body>
+</html>
